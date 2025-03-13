@@ -3,3 +3,7 @@
 - slot like `<?php echo $slot; ?>`
 - attributes in blade used we need to dynamically pass variables(tags) to the view
 - props in blade 
+
+
+##  day 6 
+- create routes and pass data to the view
