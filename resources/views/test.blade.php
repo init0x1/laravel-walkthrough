@@ -1,3 +1,6 @@
 <x-layout>
-    <h1>test page</h1> // the content between the layout tags will be inserted into the layout
+    <x-slot:heading>
+        Test Page
+    </x-slot:heading>
+    <h1>test page</h1>
 </x-layout>
