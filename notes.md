@@ -7,3 +7,6 @@
 
 ##  day 6 
 - create routes and pass data to the view
+
+## day 7
+- create model for the jobs and use it in the controller

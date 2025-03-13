@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+// use the Job model insteed of writing the logic in the route
+use App\Models\Job;
 
 Route::get('/', function () {
     return view('welcome');
@@ -12,60 +14,17 @@ Route::get('/', function () {
 Route::get('/jobs', function () {
 
      // pass data to the view
-     $jobs = [
-        [
-            "id"=>1,
-            "title"=>"Web Developer",
-            "salary"=>"$60,000",
-        ],
-        [
-            "id"=>2,
-            "title"=>"Software Engineer",
-            "salary"=>"$80,000",
-        ],
-        [
-            "id"=>3,
-            "title"=>"Network Engineer",
-            "salary"=>"$70,000",
-        ],
-        [
-            "id"=>4,
-            "title"=>"Database Administrator",
-            "salary"=>"$75,000",
-        ]
-        ];
+    $jobs = Job::all();
 
     return view('jobs',['jobs'=>$jobs]);
 });
 
 // get the job id from the URL
 Route::get('/jobs/{id}', function ($id) {
-    $jobs = [
-        [
-            "id"=>1,
-            "title"=>"Web Developer",
-            "salary"=>"$60,000",
-        ],
-        [
-            "id"=>2,
-            "title"=>"Software Engineer",
-            "salary"=>"$80,000",
-        ],
-        [
-            "id"=>3,
-            "title"=>"Network Engineer",
-            "salary"=>"$70,000",
-        ],
-        [
-            "id"=>4,
-            "title"=>"Database Administrator",
-            "salary"=>"$75,000",
-        ]
-        ];
+
 
     // find the job with the given id
-    $job = Arr::first($jobs, fn($job) => $job['id'] == $id);// find the job with the given id and return it if it not found return null
-
+    $job = Job::find($id);
     return view('job',['job'=>$job]);
 });
 
