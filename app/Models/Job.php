@@ -17,6 +17,12 @@ class Job extends Model{
     public function employer(){
         return $this->belongsTo(Employer::class);
     }
+    // create relationship between job and tag 
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, foreignPivotKey: "job_listing_id");// this creates a relationship between job and tag using the job_tag table
+
+    }
 
 }
 

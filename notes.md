@@ -32,3 +32,8 @@
 ## day 11 
 - two Eloquent relationship types: `belongsTo()` and `hasMany()`.
 - we need to create relationship between Employer and Job this done in Models
+
+## day 12 
+- working with pivot tables 
+- `belongsToMany()` relationship
+- we need to create tags  and job_tag table to create relationship between them
