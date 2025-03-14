@@ -28,5 +28,7 @@
 - we need to create relationship between the employer and the job model 
 - after then we need to get the db refresh `php artisan migrate:refresh `
 - create job factory `php artisan make:factory JobFactory`
-- 
- 
+
+## day 11 
+- two Eloquent relationship types: `belongsTo()` and `hasMany()`.
+- we need to create relationship between Employer and Job this done in Models
