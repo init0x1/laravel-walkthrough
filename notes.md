@@ -37,3 +37,7 @@
 - working with pivot tables 
 - `belongsToMany()` relationship
 - we need to create tags  and job_tag table to create relationship between them
+
+## day 14 
+- working with pagination 
+- we can use custome ui to support pagination by adding it to `AppServiceProvider`
