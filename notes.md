@@ -10,3 +10,8 @@
 
 ## day 7
 - create model for the jobs and use it in the controller
+
+## day 8 
+- working with database 
+- create migration for the jobs table `php artisan make:migration create_job_listings_table`
+- run the migration `php artisan migrate`
