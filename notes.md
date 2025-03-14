@@ -15,3 +15,7 @@
 - working with database 
 - create migration for the jobs table `php artisan make:migration create_job_listings_table`
 - run the migration `php artisan migrate`
+
+## day 9 
+-- Eloquent ORM ? 
+- create a model for the jobs table `php artisan make:model Job`
