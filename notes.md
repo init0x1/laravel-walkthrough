@@ -19,3 +19,14 @@
 ## day 9 
 -- Eloquent ORM ? 
 - create a model for the jobs table `php artisan make:model Job`
+
+## day 10
+- factory 
+- create factory for the jobs table `php artisan make:factory JobFactory --model=Job`
+- we can run the factory using `php artisan tinker` and then `App\Models\User::factory(100)->create();`
+- we need to create employer model with its factory and migration `php artisan make:model Employer -m -f`
+- we need to create relationship between the employer and the job model 
+- after then we need to get the db refresh `php artisan migrate:refresh `
+- create job factory `php artisan make:factory JobFactory`
+- 
+ 
